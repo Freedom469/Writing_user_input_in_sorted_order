@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+//getting user input
+    int num1, num2, num3, nminimum, nmiddle ,nmaximux;
+    printf("Enter 1st of three numbers: ");
+    scanf("%d", &num1);
+      printf("Enter 2nd of three numbers: ");
+    scanf("%d", &num2);
+      printf("Enter 3rd of three numbers: ");
+    scanf("%d", &num3);
+
+    //sorting through the input numbers
+
+    //sorting order:1 2 3
+    if((num1 <= num2) && (num2 <= num3)){
+         nminimum = num1;
+         nmiddle = num2;
+         nmaximux = num3;
+
+    }
+
+    //sorting order: 1 3 2
+      if((num1 <= num3) && (num3 <= num2)){
+         nminimum = num1;
+         nmiddle = num3;
+         nmaximux = num2;
+
+    }
+
+    //sorting order: 2 1 3
+      if((num2 <= num1) && (num3 <= num2)){
+         nminimum = num2;
+         nmiddle = num1;
+         nmaximux = num3;
+
+    }
+
+        //sorting order: 2 3 1
+      if((num2 <= num3) && (num3 <= num1)){
+         nminimum = num2;
+         nmiddle = num3;
+         nmaximux = num1;
+
+    }
+        //sorting order: 3 2 1
+      if((num3 <= num2) && (num2 <= num1)){
+         nminimum = num3;
+         nmiddle = num2;
+         nmaximux = num1;
+
+    }
+    // Write 3 numbers in sorted order
+    printf("Minimum: %d\n", nminimum);
+    printf("Middle: %d\n",nmiddle);
+    printf("Maximum: %d\n",nmaximux);
+    return 0;
+}
+
